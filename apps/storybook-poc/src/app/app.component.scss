@@ -1,0 +1,12 @@
+.green {
+  --primary-color: #36a3d9;
+  --secondary-color: #ff0000;
+}
+
+.green {
+  @apply bg-green-200 text-green-900;
+}
+
+.red {
+  @apply bg-red-200 text-red-900;
+}
