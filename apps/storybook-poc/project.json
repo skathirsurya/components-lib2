@@ -1,0 +1,96 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/storybook-poc/src",
+  "prefix": "components-lib2",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/storybook-poc",
+        "index": "apps/storybook-poc/src/index.html",
+        "main": "apps/storybook-poc/src/main.ts",
+        "polyfills": "apps/storybook-poc/src/polyfills.ts",
+        "tsConfig": "apps/storybook-poc/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/storybook-poc/src/favicon.ico",
+          "apps/storybook-poc/src/assets"
+        ],
+        "styles": ["apps/storybook-poc/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/storybook-poc/src/environments/environment.ts",
+              "with": "apps/storybook-poc/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "storybook-poc:build:production"
+        },
+        "development": {
+          "browserTarget": "storybook-poc:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4193
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "storybook-poc:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/storybook-poc/**/*.ts",
+          "apps/storybook-poc/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/storybook-poc"],
+      "options": {
+        "jestConfig": "apps/storybook-poc/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
