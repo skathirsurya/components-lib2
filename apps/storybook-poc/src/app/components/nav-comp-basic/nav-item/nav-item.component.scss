@@ -1,29 +1,35 @@
 .nav-item {
-  @apply rounded text-white;
-
-  // height: 40px;
-  // width: 192px;
-  // padding: 8px;
-  // margin: 4px 0;
-  // border-radius: 4px;
-  // color: white;
-}
-
-.nav-item--basic {
-  @apply bg-gray-700 font-sans;
-
-  // background-color: rgb(55 65 81);
-}
-.nav-item--csbs {
-  @apply bg-indigo-900 font-mono;
-
-  // background-color: rgb(49 46 129);
-}
-
-.nav-item--small {
-  @apply h-8 w-44 p-1 my-1;
+  @apply w-full py-2 pl-3 text-left my-1 pr-1;
 }
 
 .nav-item--medium {
-  @apply h-10 w-48 p-2 my-1;
+  @apply w-full py-2 pl-3 text-left my-1 pr-1;
+}
+
+.nav-item--basic {
+  @apply text-gray-700 text-base font-light;
+}
+
+.nav-item--basic:hover {
+  @apply bg-black bg-opacity-25 text-white;
+}
+
+.nav-item--basic.active,
+.nav-item--basic.active:hover {
+  @apply bg-black bg-opacity-50 text-slate-50;
+}
+
+//csbs styles
+
+.nav-item--csbs {
+  @apply text-white text-base font-light bg-indigo-900;
+}
+
+.nav-item--csbs:hover {
+  @apply bg-indigo-500  text-white;
+}
+
+.nav-item--csbs.active,
+.nav-item--csbs.active:hover {
+  @apply bg-indigo-900 bg-opacity-50 text-slate-50;
 }

@@ -17,7 +17,10 @@
           "apps/storybook-poc/src/favicon.ico",
           "apps/storybook-poc/src/assets"
         ],
-        "styles": ["apps/storybook-poc/src/styles.scss"],
+        "styles": [
+          "apps/storybook-poc/src/styles.scss",
+          "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+        ],
         "scripts": []
       },
       "configurations": {

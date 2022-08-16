@@ -6,31 +6,31 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav-item.component.scss'],
 })
 export class NavItemComponent implements OnInit {
-  /**
-   * What theme to use?
-   */
+  @Input()
+  nav: any = [];
+
   @Input()
   theme: 'basic' | 'csbs' = 'basic';
 
-  /**
-   * How large the nav item should be?
-   */
   @Input()
   size: 'small' | 'medium' = 'medium';
 
-  /**
-   * Button contents
-   *
-   * @required
-   */
   @Input()
   label = 'Nav Item';
+
+  @Input()
+  icon: string;
+
+  @Input()
+  showIcon = true;
 
   public get classNames(): string[] {
     return ['nav-item', `nav-item--${this.theme}`, `nav-item--${this.size}`];
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
   ngOnInit(): void {}
 }

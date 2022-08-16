@@ -1,4 +1,27 @@
-<div class="h-screen w-60 border border-black p-4 bg-gray-200">
-  Nav Layout
-  <components-lib2-nav-item></components-lib2-nav-item>
+<div class="min-h-screen h-full w-60 border-r border-black p-4 bg-gray-200">
+  <div class="text-lg mb-2">{{ CompanyName }}</div>
+  <components-lib2-nav-item
+    *ngFor="let nav of navigations"
+    [label]="nav.label"
+    [size]="nav.size"
+    [icon]="nav.icon"
+  ></components-lib2-nav-item>
 </div>
+
+<!-- <mat-drawer-container class="min-h-screen" autosize>
+  <mat-drawer #drawer [ngClass]="classNames" mode="side" opened>
+    <div class="text-lg mb-2">Nav Layout</div>
+    <components-lib2-nav-item
+      *ngFor="let nav of navigations"
+      [label]="nav.label"
+      [size]="nav.size"
+      [icon]="nav.icon"
+    ></components-lib2-nav-item>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+</mat-drawer-container> -->

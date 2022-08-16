@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { NavItemComponent } from './nav-item.component';
 
 export default {
-  title: 'NavItemComponent',
+  title: 'Core/Atoms/Navigation Item',
   component: NavItemComponent,
   argTypes: {
     theme: {

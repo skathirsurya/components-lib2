@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavLayoutComponent } from './components/nav-layout/nav-layout.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
     NavLayoutComponent,
     NavItemComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes), BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
