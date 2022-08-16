@@ -1,11 +1,16 @@
-<div class="min-h-screen h-full w-60 border-r border-black p-4 bg-gray-200">
+<div [ngClass]="classNames">
   <div class="text-lg mb-2">{{ CompanyName }}</div>
   <components-lib2-nav-item
     *ngFor="let nav of navigations"
     [label]="nav.label"
-    [size]="nav.size"
+    [size]="size"
+    [showIcon]="showIcon"
     [icon]="nav.icon"
+    [theme]="theme"
+    [urlPath]="nav.urlPath"
+    (navClicked)="navtouched.emit($event)"
   ></components-lib2-nav-item>
+  <button (click)="sizeChange.emit(size)">Button</button>
 </div>
 
 <!-- <mat-drawer-container class="min-h-screen" autosize>

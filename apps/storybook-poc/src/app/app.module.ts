@@ -11,9 +11,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AppRoutes } from './app.routing';
+import { AccountsComponent } from './components/accounts/accounts.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
-  declarations: [AppComponent, NavLayoutComponent, NavItemComponent],
+  declarations: [
+    AppComponent,
+    NavLayoutComponent,
+    NavItemComponent,
+    DashboardComponent,
+    AccountsComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
@@ -23,6 +33,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatIconModule,
     CommonModule,
+    AppRoutes,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

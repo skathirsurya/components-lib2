@@ -3,11 +3,16 @@
   <div>{{ label }}</div>
 </div> -->
 
-<button mat-button [ngClass]="classNames">
+<button
+  mat-button
+  class="nav-item"
+  [ngClass]="['nav-item--' + theme, 'nav-item--' + size]"
+  (click)="showToastMessage()"
+>
   <span fxFlex fxLayoutAlign="justify-center center">
     <span fxFlex fxLayoutAlign=" center">
       <ng-container *ngIf="showIcon">
-        <mat-icon class="mr-2 leading-5">{{ icon }}</mat-icon>
+        <mat-icon class="mr-2 leading-5 text-base">{{ icon }}</mat-icon>
       </ng-container>
       {{ label }}
     </span>

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'components-lib2-nav-layout',
@@ -13,27 +14,44 @@ export class NavLayoutComponent implements OnInit {
   theme: 'basic' | 'csbs' = 'basic';
 
   @Input()
+  size: 'small' | 'medium' = 'medium';
+
+  @Input()
+  showIcon = true;
+
+  @Input()
   navigations = [
     {
-      size: 'medium',
       label: 'Dashboard',
-      icon: 'menu',
+      icon: 'dashboard',
       urlPath: '/dashboard',
     },
     {
-      size: 'medium',
       label: 'Accounts',
       icon: 'account_box',
+      urlPath: '/accounts',
     },
   ];
 
+  @Output()
+  sizeChange = new EventEmitter<string>();
+
+  @Output()
+  navtouched = new EventEmitter();
+
   public get classNames(): string[] {
-    return ['nav-layout', `nav-layout--${this.theme}`];
+    return [
+      'nav-layout',
+      `nav-layout--${this.theme}`,
+      `nav-layout--${this.size}`,
+    ];
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sizeChange.emit(this.size);
+  }
 }

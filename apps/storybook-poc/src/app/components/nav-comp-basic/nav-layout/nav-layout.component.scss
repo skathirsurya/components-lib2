@@ -1,7 +1,19 @@
 .nav-layout {
-  @apply p-2;
+  @apply min-h-screen h-full border-r;
 }
 
 .nav-layout--basic {
-  @apply w-60 bg-indigo-900;
+  @apply p-4 bg-gray-200;
+}
+
+.nav-layout--csbs {
+  @apply p-4 bg-indigo-700 text-white;
+}
+
+.nav-layout--small {
+  @apply w-40;
+}
+
+.nav-layout--medium {
+  @apply w-60;
 }

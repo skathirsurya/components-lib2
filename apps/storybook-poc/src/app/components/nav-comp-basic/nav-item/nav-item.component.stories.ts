@@ -1,8 +1,13 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { NavItemComponent } from './nav-item.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export default {
-  title: 'Core/Atoms/Navigation Item',
+  title: 'Base/Atoms/Navigation Item',
   component: NavItemComponent,
   argTypes: {
     theme: {
@@ -13,10 +18,21 @@ export default {
       options: ['small', 'medium'],
       control: { type: 'radio' },
     },
+    showIcon: {
+      options: ['true', 'false'],
+      control: { type: 'boolean' },
+    },
+    navClicked: { action: 'navClicked' },
   },
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [
+        MatIconModule,
+        FlexLayoutModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        BrowserAnimationsModule,
+      ],
     }),
   ],
 } as Meta<NavItemComponent>;
@@ -30,6 +46,17 @@ Basic.args = {
   theme: 'basic',
   label: 'Nav Item',
   size: 'medium',
+  icon: 'menu',
+  showIcon: false,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  theme: 'basic',
+  label: 'Nav Item',
+  size: 'medium',
+  icon: 'menu',
+  showIcon: true,
 };
 
 // export const CSBS = Template.bind({});

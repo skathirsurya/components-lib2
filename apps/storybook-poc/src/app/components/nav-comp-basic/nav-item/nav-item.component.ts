@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Subject } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'components-lib2-nav-item',
@@ -6,12 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav-item.component.scss'],
 })
 export class NavItemComponent implements OnInit {
-  @Input()
-  nav: any = [];
+  // @Input()
+  // nav: any = [];
 
   @Input()
   theme: 'basic' | 'csbs' = 'basic';
 
+  /**
+   * How large should the Navigation Item be?
+   */
   @Input()
   size: 'small' | 'medium' = 'medium';
 
@@ -24,13 +29,32 @@ export class NavItemComponent implements OnInit {
   @Input()
   showIcon = true;
 
+  @Input()
+  urlPath: string;
+
+  @Output()
+  navClicked = new EventEmitter();
+
+  // @Output()
+  // emitEvent = new EventEmitter<any>();
+
   public get classNames(): string[] {
-    return ['nav-item', `nav-item--${this.theme}`, `nav-item--${this.size}`];
+    return [`nav-item--${this.theme}`, `nav-item--${this.size}`];
   }
 
+  // checkEvent(event: any) {
+  //   this.emitEvent.emit(event);
+  //   console.log('Event', event);
+  // }
+
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor() {}
+  constructor(private _snackBar: MatSnackBar) {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
   ngOnInit(): void {}
+
+  showToastMessage() {
+    this.navClicked.emit(this.label + ' is clicked');
+    this._snackBar.open(this.label + ' is clicked', '', { duration: 3000 });
+  }
 }
