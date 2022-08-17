@@ -30,7 +30,10 @@ export class NavItemComponent implements OnInit {
   showIcon = true;
 
   @Input()
-  urlPath: string;
+  targetUrl: string;
+
+  @Input()
+  apiUrl: string;
 
   @Output()
   navClicked = new EventEmitter();
@@ -55,6 +58,10 @@ export class NavItemComponent implements OnInit {
 
   showToastMessage() {
     this.navClicked.emit(this.label + ' is clicked');
-    this._snackBar.open(this.label + ' is clicked', '', { duration: 3000 });
+    this._snackBar.open(
+      this.label + ' is clicked and routes to ' + this.targetUrl,
+      '',
+      { duration: 3000 }
+    );
   }
 }

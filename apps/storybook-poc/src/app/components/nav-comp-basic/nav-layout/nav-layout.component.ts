@@ -24,12 +24,14 @@ export class NavLayoutComponent implements OnInit {
     {
       label: 'Dashboard',
       icon: 'dashboard',
-      urlPath: '/dashboard',
+      targetUrl: '/dashboard',
+      apiUrl: '/v1/dashboard',
     },
     {
       label: 'Accounts',
       icon: 'account_box',
-      urlPath: '/accounts',
+      targetUrl: '/accounts',
+      apiUrl: '/v1/accounts',
     },
   ];
 
@@ -52,6 +54,6 @@ export class NavLayoutComponent implements OnInit {
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
   ngOnInit(): void {
-    this.sizeChange.emit(this.size);
+    // this.sizeChange.emit(this.size);
   }
 }

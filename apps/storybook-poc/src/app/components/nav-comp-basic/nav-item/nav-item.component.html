@@ -8,6 +8,8 @@
   class="nav-item"
   [ngClass]="['nav-item--' + theme, 'nav-item--' + size]"
   (click)="showToastMessage()"
+  [routerLink]="targetUrl"
+  routerLinkActive="active"
 >
   <span fxFlex fxLayoutAlign="justify-center center">
     <span fxFlex fxLayoutAlign=" center">

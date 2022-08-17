@@ -7,10 +7,11 @@
     [showIcon]="showIcon"
     [icon]="nav.icon"
     [theme]="theme"
-    [urlPath]="nav.urlPath"
+    [targetUrl]="nav.targetUrl"
+    [apiUrl]="nav.apiUrl"
     (navClicked)="navtouched.emit($event)"
   ></components-lib2-nav-item>
-  <button (click)="sizeChange.emit(size)">Button</button>
+  <!-- <button (click)="sizeChange.emit(size)">Button</button> -->
 </div>
 
 <!-- <mat-drawer-container class="min-h-screen" autosize>

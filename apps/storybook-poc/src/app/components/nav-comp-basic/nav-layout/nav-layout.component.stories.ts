@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Routes, RouterModule } from '@angular/router';
 
 export default {
   title: 'Base/Atoms/Navigation Layout',
@@ -20,7 +21,7 @@ export default {
       options: ['small', 'medium'],
       control: { type: 'radio' },
     },
-    sizeChange: { action: 'sizeisChanged' },
+    // sizeChange: { action: 'sizeisChanged' },
     navtouched: { action: 'navClicked' },
   },
   decorators: [
@@ -51,10 +52,14 @@ Basic.args = {
     {
       label: 'Dashboard',
       icon: 'dashboard',
+      targetUrl: '/dashboard',
+      apiUrl: '/v1/dashboard',
     },
     {
       label: 'Accounts',
       icon: 'account_box',
+      targetUrl: '/accounts',
+      apiUrl: '/v1/accounts',
     },
   ],
 };
