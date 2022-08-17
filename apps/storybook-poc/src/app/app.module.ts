@@ -15,6 +15,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutes } from './app.routing';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ButtonComponent } from './components/button/button.component';
+import { ButtonGroupComponent } from './components/button-group/button-group.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { TableComponent } from './components/table/table.component';
+import { FormComponent } from './components/form/form.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +31,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NavItemComponent,
     DashboardComponent,
     AccountsComponent,
+    ButtonComponent,
+    ButtonGroupComponent,
+    AvatarComponent,
+    ProgressBarComponent,
+    DatePickerComponent,
+    TableComponent,
+    FormComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
