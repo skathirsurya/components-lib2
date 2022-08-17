@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "hash8-platform",
+            "prefix": "components-lib2",
             "style": "kebab-case"
           }
         ]

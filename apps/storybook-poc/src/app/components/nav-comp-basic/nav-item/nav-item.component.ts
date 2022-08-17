@@ -3,13 +3,13 @@ import { Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'components-lib2-nav-item',
+  selector: 'hash8-platform-nav-item',
   templateUrl: './nav-item.component.html',
   styleUrls: ['./nav-item.component.scss'],
 })
 export class NavItemComponent implements OnInit {
-  // @Input()
-  // nav: any = [];
+  @Input()
+  nav: any = [];
 
   @Input()
   theme: 'basic' | 'csbs' = 'basic';

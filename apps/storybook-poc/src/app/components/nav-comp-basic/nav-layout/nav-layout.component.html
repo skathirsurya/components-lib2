@@ -1,6 +1,6 @@
 <div [ngClass]="classNames">
   <div class="text-lg mb-2">{{ CompanyName }}</div>
-  <components-lib2-nav-item
+  <hash8-platform-nav-item
     *ngFor="let nav of navigations"
     [label]="nav.label"
     [size]="size"
@@ -10,7 +10,7 @@
     [targetUrl]="nav.targetUrl"
     [apiUrl]="nav.apiUrl"
     (navClicked)="navtouched.emit($event)"
-  ></components-lib2-nav-item>
+  ></hash8-platform-nav-item>
   <!-- <button (click)="sizeChange.emit(size)">Button</button> -->
 </div>
 

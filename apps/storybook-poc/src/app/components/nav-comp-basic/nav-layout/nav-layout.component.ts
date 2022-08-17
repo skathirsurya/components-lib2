@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'components-lib2-nav-layout',
+  selector: 'hash8-platform-nav-layout',
   templateUrl: './nav-layout.component.html',
   styleUrls: ['./nav-layout.component.scss'],
 })

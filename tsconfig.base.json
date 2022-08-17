@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@components-lib2/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@components-lib2/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@components-lib2/nav-list": ["libs/nav-list/src/index.ts"],
+      "@hash8io/navigation-list": ["libs/navigation-list/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

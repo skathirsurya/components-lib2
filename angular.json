@@ -4,6 +4,8 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
+    "nav-list": "libs/nav-list",
+    "navigation-list": "libs/navigation-list",
     "storybook-poc": "apps/storybook-poc",
     "storybook-poc-e2e": "apps/storybook-poc-e2e",
     "this-app": "apps/this-app",
