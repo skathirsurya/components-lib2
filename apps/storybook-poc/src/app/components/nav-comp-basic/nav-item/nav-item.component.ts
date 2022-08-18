@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Subject } from 'rxjs';
+// import { Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -8,8 +8,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./nav-item.component.scss'],
 })
 export class NavItemComponent implements OnInit {
-  @Input()
-  nav: any = [];
+  // @Input()
+  // nav: any = [];
 
   @Input()
   theme: 'basic' | 'csbs' = 'basic';

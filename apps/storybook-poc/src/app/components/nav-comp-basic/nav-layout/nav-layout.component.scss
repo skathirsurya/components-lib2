@@ -1,19 +1,24 @@
+//default styles
 .nav-layout {
   @apply min-h-screen h-full border-r;
 }
 
+//theme-basic
 .nav-layout--basic {
   @apply p-4 bg-gray-200;
 }
 
+//theme-csbs
 .nav-layout--csbs {
   @apply p-4 bg-indigo-700 text-white;
 }
 
+//size-small
 .nav-layout--small {
   @apply w-40;
 }
 
+//size-medium
 .nav-layout--medium {
   @apply w-60;
 }

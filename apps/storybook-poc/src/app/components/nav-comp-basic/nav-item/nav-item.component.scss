@@ -1,38 +1,48 @@
+//default styles
 .nav-item {
   @apply w-full text-left text-black;
 }
 
+//size-medium
 .nav-item--medium {
   @apply py-2 pl-3 my-1 pr-1 text-base;
 }
 
+//size-small
 .nav-item--small {
   @apply py-1 pl-2 my-1 pr-1 text-sm;
 }
 
+//basic theme styles
+
+//theme-basic
 .nav-item--basic {
   @apply text-gray-700 font-light;
 }
 
+//theme-basic when hovered
 .nav-item--basic:hover {
   @apply bg-black bg-opacity-25 text-white;
 }
 
+//theme-basic when active and hovered
 .nav-item--basic.active,
 .nav-item--basic.active:hover {
   @apply bg-black bg-opacity-50 text-slate-50;
 }
 
-//csbs styles
-
+//csbs theme styles
+//theme-csbs
 .nav-item--csbs {
   @apply text-white font-light bg-indigo-900;
 }
 
+//theme-csbs when hovered
 .nav-item--csbs:hover {
   @apply bg-indigo-500  text-white;
 }
 
+//theme-csbs when active and hovered
 .nav-item--csbs.active,
 .nav-item--csbs.active:hover {
   @apply bg-indigo-900 bg-opacity-50 text-slate-50;

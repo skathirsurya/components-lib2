@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Subject } from 'rxjs';
+// import { Subject } from 'rxjs';
 
 @Component({
   selector: 'hash8-platform-nav-layout',
